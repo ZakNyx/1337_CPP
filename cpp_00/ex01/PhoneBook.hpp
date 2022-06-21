@@ -6,15 +6,18 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:24:26 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/20 19:26:08 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/06/21 18:50:46 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-class PhoneBook{
+#include "Contact.hpp"
 
+class PhoneBook{
+    public:
+        Contact Contacts[8];
 
 };
 
