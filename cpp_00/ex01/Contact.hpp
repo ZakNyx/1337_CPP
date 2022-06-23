@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:23:21 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/21 20:03:04 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/06/23 01:05:51 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 class	Contact{
 
 	public:
+		void setNumber(std::string number)
+		{
+			number = number;
+		}
+		std::string	getNumber()
+		{
+			return number;
+		}
+	private:
 		std::string number;
 		std::string first_name;
 		std::string last_name;
