@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:24:26 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/24 18:02:14 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/06/25 14:31:15 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,15 @@
 class PhoneBook{
     public:
         Contact Contacts[8];
-        PhoneBook(void);
-        ~PhoneBook(void);
+        PhoneBook( void );
+        ~PhoneBook( void );
         
         void    add( void );
         void    search( void );
     
     private:
-        static int i;
-        int pos;
-
+        static int  i;
+        int         pos;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:23:21 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/24 18:01:53 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/06/25 16:49:11 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ class	Contact{
 		{
 			nickname = nname;
 		}
-		std::string	getnname()
+		std::string	getNname()
 		{
 			return nickname;
 		}

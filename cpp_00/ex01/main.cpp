@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 18:39:03 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/24 19:50:36 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/06/25 18:48:42 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,26 @@
 
 int main(void)
 {
-	std::cout << "ADD / SEARCH / EXIT" << std::endl;
+	std::cout << "--> ADD / SEARCH / EXIT" << std::endl;
 	PhoneBook phoneBook;
 	std::string mode;
 	while (1)
 	{
 		std::getline(std::cin, mode);
 		if (mode == "ADD")
+		{
 			phoneBook.add();
-		if (mode == "SEARCH")
+			std::cout << "--> ADD | SEARCH | EXIT" << std::endl; 
+		}
+		else if (mode == "SEARCH")
+		{
 			phoneBook.search();
-		if (mode == "EXIT")
+			std::cout << "--> ADD | SEARCH | EXIT" << std::endl; 
+		}
+		else if (mode == "EXIT")
 			std::exit(0);
+
+		
 	}
 	return (0);
 }
