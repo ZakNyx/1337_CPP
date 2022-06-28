@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 19:57:30 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/25 20:21:33 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/06/27 19:52:55 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		main( void ) {
 
 	for ( acc_int_t it( acc_begin, dep_begin );
 		  it.first != acc_end && it.second != dep_end;
-		  ++(it.first), ++(it.second) ) {
+	 	  ++(it.first), ++(it.second) ) {
 
 		(*(it.first)).makeDeposit( *(it.second) );
 	}
