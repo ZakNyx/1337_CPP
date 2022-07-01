@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 17:26:15 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/01 18:32:05 by zak              ###   ########.fr       */
+/*   Created: 2022/07/01 17:56:12 by zak               #+#    #+#             */
+/*   Updated: 2022/07/01 18:59:00 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-Zombie* newZombie( std::string name )
+#include <iostream>
+
+class Zombie
 {
-    Zombie* _zomb = new Zombie(name);
-    return (_zomb);
-}
+private:
+	std::string name;
+
+public:
+	Zombie(void);
+	~Zombie(void);
+	void announce( void );
+	void setName(std::string zname);
+	std::string getName( void );
+};
+
+#endif /* ZOMBIE */
