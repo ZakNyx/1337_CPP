@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/03 18:19:48 by zak               #+#    #+#             */
-/*   Updated: 2022/07/07 19:57:46 by zak              ###   ########.fr       */
+/*   Created: 2022/07/07 23:10:08 by zak               #+#    #+#             */
+/*   Updated: 2022/07/08 19:33:22 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-#define HUMANB_HPP
+#ifndef REPLACE_HPP
+#define REPLACE_HPP
 
-#include "Weapon.hpp"
 #include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
 
-class HumanB
+class	Replace
 {
-	private:
-		std::string name;
-		Weapon		*weaponB;
-	
 	public:
-		void		attack(void);
+		void run( std::string oldStr, std::string newStr, std::string fileName );
 		
-		void		setWeapon( Weapon &newWeapon );
-		
-		std::string getName();
-		void		setName(std::string name);
-		
-		HumanB(std::string name);
-		~HumanB(void);
+		Replace( void );
+		~Replace( void );
 };
 
-#endif /* HUMANA_HPP */
+#endif /* REPLACE_HPP */  

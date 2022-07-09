@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/03 18:19:48 by zak               #+#    #+#             */
-/*   Updated: 2022/07/07 19:57:46 by zak              ###   ########.fr       */
+/*   Created: 2022/07/08 18:08:34 by zak               #+#    #+#             */
+/*   Updated: 2022/07/08 19:13:32 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-#define HUMANB_HPP
+#include "Replace.hpp"
 
-#include "Weapon.hpp"
-#include <iostream>
 
-class HumanB
+int main(int ac, char **av)
 {
-	private:
-		std::string name;
-		Weapon		*weaponB;
-	
-	public:
-		void		attack(void);
+	(void) av;
+	if (ac == 4)
+	{
+		Replace r;
 		
-		void		setWeapon( Weapon &newWeapon );
-		
-		std::string getName();
-		void		setName(std::string name);
-		
-		HumanB(std::string name);
-		~HumanB(void);
-};
-
-#endif /* HUMANA_HPP */
+		r.run(av[2], av[3], av[1]);
+	}
+	else
+		std::cout << "<filename> | S1 | S2" << std::endl;
+	return (0);
+}
