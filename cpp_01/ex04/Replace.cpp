@@ -6,7 +6,7 @@
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:06:04 by zak               #+#    #+#             */
-/*   Updated: 2022/07/08 20:17:16 by zak              ###   ########.fr       */
+/*   Updated: 2022/07/09 18:49:34 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void Replace::run(std::string oldStr, std::string newStr, std::string fileName)
 		return ;
 	}
 	std::ofstream write(fileName + ".replace");
-	string.assign(std::istreambuf_iterator<char>(read), x);
+	string.assign(std::istreambuf_iterator<char>(read), std::istreambuf_iterator<char>());
 	while (i < str)
 	{
 		if (string.compare(i, oldStr.length(), oldStr) == 0)
