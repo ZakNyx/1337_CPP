@@ -6,10 +6,12 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:44:25 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/28 16:31:51 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/07/28 21:44:04 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 class Fixed
 {
@@ -28,3 +30,5 @@ class Fixed
 		void setRawBits( int const raw );
 		
 };
+
+#endif
