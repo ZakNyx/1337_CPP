@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 17:33:36 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/29 16:56:51 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/07/29 17:00:40 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Fixed::Fixed( const int _Number ){
 }
 
 Fixed::Fixed( const float _Number ){
-	this->_Number = roundf(_Number) * (1 << this->_Fractional));
+	this->_Number = roundf(_Number * (1 << this->_Fractional));
 }
 
 Fixed& Fixed::operator=( Fixed const & _n1 ){
@@ -41,16 +41,18 @@ Fixed& Fixed::operator=( Fixed const & _n1 ){
 	return *this;
 }
 
-// std::ostream & operator<<(  std::ostream & os, Fixed const & _n1 ){
-// 	os<<_n1.toFloat();
-// }
+std::ostream & operator<<(  std::ostream & os, Fixed const & _n1 ){
+	os<<_n1.toFloat();
+	
+	return (os);
+}
 
 float   Fixed::toFloat( void ) const{
 	return (this->_Number / (float)(1 << this->_Fractional));
 }
 
 int		Fixed::toInt( void ) const{
-	return (this->_Number << this->_Fractional);
+	return (this->_Number >> this->_Fractional);
 }
 
 void    Fixed::setRawBits( int const raw ){

@@ -5,35 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/21 18:39:03 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/29 17:18:46 by zihirri          ###   ########.fr       */
+/*   Created: 2022/07/28 17:33:45 by zihirri           #+#    #+#             */
+/*   Updated: 2022/07/29 22:53:20 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Contact.hpp"
-#include "PhoneBook.hpp"
 
-int main(void)
-{
-	std::cout << "--> ADD / SEARCH / EXIT" << std::endl;
-	PhoneBook phoneBook;
-	std::string mode;
-	while (1)
-	{
-		std::getline(std::cin, mode);
-		if (mode == "ADD")
-		{
-			phoneBook.add();
-			std::cout << "--> ADD | SEARCH | EXIT" << std::endl; 
-		}
-		else if (mode == "SEARCH")
-		{
-			phoneBook.search();
-			std::cout << "--> ADD | SEARCH | EXIT" << std::endl; 
-		}
-		else if (mode == "EXIT")
-			std::exit(0);
-	}
-	return (0);
+#include "Fixed.hpp"
+
+int main( void ) {
+   
+    Fixed a;
+    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+    std::cout << a << std::endl;
+    std::cout << ++a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a++ << std::endl;
+    std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << Fixed::max( a, b ) << std::endl;
+return 0;
 }

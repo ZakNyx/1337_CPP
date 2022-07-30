@@ -6,57 +6,29 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:23:21 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/25 16:49:11 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/07/29 17:19:32 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
+#include <string>
+#include <iostream>
 
 class	Contact{
 
 	public:
-		void setNumber(std::string anumber)
-		{
-			number = anumber;
-		}
-		std::string	getNumber()
-		{
-			return number;
-		}
-		void setFname(std::string fname)
-		{
-			first_name = fname;
-		}
-		std::string	getFname()
-		{
-			return first_name;
-		}
-		void setLname(std::string lname)
-		{
-			last_name = lname;
-		}
-		std::string	getLname()
-		{
-			return last_name;
-		}
-		void setNname(std::string nname)
-		{
-			nickname = nname;
-		}
-		std::string	getNname()
-		{
-			return nickname;
-		}
-		void setDsecret(std::string dsecret)
-		{
-			darkest_secret = dsecret;
-		}
-		std::string	getDsecret()
-		{
-			return darkest_secret;
-		}	
+		void setNumber(std::string anumber);
+		std::string	getNumber();
+		void setFname(std::string fname);
+		std::string	getFname();
+		void setLname(std::string lname);
+		std::string	getLname();
+		void setNname(std::string nname);
+		std::string	getNname();
+		void setDsecret(std::string dsecret);
+		std::string	getDsecret();
 		Contact();
 		~Contact();
 		
