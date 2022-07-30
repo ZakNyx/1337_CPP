@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 22:52:03 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/30 16:03:28 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/07/30 19:42:25 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ class Point{
 		Point(const Point & _p1);
 		Point & operator = (Point const & _n1);
 		~Point( void );
-
-
-
+		
+		Fixed	getX( void ) const;
+		Fixed	getY( void ) const;
+		
+		Fixed	area(Point const & x, Point const & y) const;
 };
 
 #endif

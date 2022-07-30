@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/28 17:34:01 by zihirri           #+#    #+#              #
-#    Updated: 2022/07/28 18:52:44 by zihirri          ###   ########.fr        #
+#    Updated: 2022/07/30 21:07:57 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ CC = @g++
 RM = @rm -rf
 
 SRC =	main.cpp \
-		Fixed.cpp
+		Fixed.cpp \
+		Point.cpp \
+		bsp.cpp 
 
 
 # Colors
