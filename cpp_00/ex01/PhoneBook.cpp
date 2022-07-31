@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:32:04 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/25 18:34:01 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/07/31 12:16:05 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ void	PhoneBook::search(void)
 	pos = 0;
 	while (pos < 8)
 	{
-		if (Contacts[pos].getFname().empty())
+		if (this->Contacts[pos].getFname().empty())
 			break;
     	std::cout << std::setw(10) << pos << "|";
-		rander = Contacts[pos].getFname();
+		rander = this->Contacts[pos].getFname();
 		if (rander.length() > 10)
 		{
 			rander = rander.substr(0,10);
@@ -52,8 +52,8 @@ void	PhoneBook::search(void)
 			std::cout << std::setw(10) << rander << "|";
 		}
 		else
-			std::cout << std::setw(10) << Contacts[pos].getFname() << "|";
-		rander = Contacts[pos].getLname();
+			std::cout << std::setw(10) << this->Contacts[pos].getFname() << "|";
+		rander = this->Contacts[pos].getLname();
 		if (rander.length() > 10)
 		{
 			rander = rander.substr(0,10);
@@ -61,8 +61,8 @@ void	PhoneBook::search(void)
 			std::cout << std::setw(10) << rander << "|";
 		}
 		else
-			std::cout << std::setw(10) << Contacts[pos].getLname() << "|";
-		rander = Contacts[pos].getNname();
+			std::cout << std::setw(10) << this->Contacts[pos].getLname() << "|";
+		rander = this->Contacts[pos].getNname();
 		if (rander.length() > 10)
 		{
 			rander = rander.substr(0,10);
@@ -70,7 +70,7 @@ void	PhoneBook::search(void)
 			std::cout << std::setw(10) << rander << "|" << std::endl;
 		}
 		else
-		std::cout << std::setw(10) << Contacts[pos].getNname() << std::endl; 
+		std::cout << std::setw(10) << this->Contacts[pos].getNname() << std::endl; 
 		pos++;
 	}
 	std::cout << "Choose an index" << std::endl;
