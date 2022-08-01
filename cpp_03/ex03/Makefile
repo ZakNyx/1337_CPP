@@ -9,6 +9,7 @@ RM = @rm -rf
 SRC =	main.cpp \
 		ClapTrap.cpp \
 		FragTrap.cpp \
+		DiamondTrap.cpp \
 		ScavTrap.cpp
 
 

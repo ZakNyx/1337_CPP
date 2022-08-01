@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:32:04 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/31 12:16:05 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 18:04:36 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ void	PhoneBook::search(void)
 	}
 	std::cout << "Choose an index" << std::endl;
 	std::cin >> dex;
+	// if (dex == "\0")
+	// 	std::exit(0);
 	index = std::atoi(dex.c_str());
 	if (index < 0 || index >= pos || isdigit(pos) != 0)
 	{
@@ -89,6 +91,8 @@ void	PhoneBook::add(void)
 	std::string input;
 	std::cout << "Number: " << std::endl;
 	std::getline(std::cin, input);
+	// if (input == "\0")
+	// 	std::exit(0);
 	this->Contacts[i].setNumber(input);
 	if (this->Contacts[i].getNumber().empty())
 	{
@@ -97,6 +101,8 @@ void	PhoneBook::add(void)
 	}
 	std::cout << "First Name: " << std::endl;
 	std::getline(std::cin, input);
+	// if (input == "\0")
+	// 	std::exit(0);
 	this->Contacts[i].setFname(input);
 	if (this->Contacts[i].getFname().empty())
 	{
@@ -105,6 +111,8 @@ void	PhoneBook::add(void)
 		return ;
 	}
 	std::cout << "Last Name: " << std::endl;
+	// if (input == "\0")
+	// 	std::exit(0);
 	std::getline(std::cin, input);
 	this->Contacts[i].setLname(input);
 	if (this->Contacts[i].getLname().empty())
@@ -116,6 +124,8 @@ void	PhoneBook::add(void)
 	}
 	std::cout << "Nickname: " << std::endl;
 	std::getline(std::cin, input);
+	// if (input == "\0")
+	// 	std::exit(0);
 	this->Contacts[i].setNname(input);
 	if (this->Contacts[i].getNname().empty())
 	{
@@ -127,6 +137,8 @@ void	PhoneBook::add(void)
 	}
 	std::cout << "Darkest Secret: " << std::endl;
 	std::getline(std::cin, input);
+	// if (input == "\0")
+	// 	std::exit(0);
 	this->Contacts[i].setDsecret(input);
 	if (this->Contacts[i].getDsecret().empty())
 	{

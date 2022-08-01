@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 21:22:55 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 10:51:25 by zihirri          ###   ########.fr       */
+/*   Created: 2022/07/31 14:07:18 by zihirri           #+#    #+#             */
+/*   Updated: 2022/08/01 19:22:46 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main(void){
-    
-    ClapTrap z("Zak");
-    ScavTrap s("DummyTwo");
-    FragTrap x("Dummy");
-    z.attack("Dummy");
-    s.attack("Zak");
-    x.attack("DummyTwo");
-}
+#include "ClapTrap.hpp"
+
+class ScavTrap : public virtual ClapTrap{
+	protected:
+		const static unsigned int _energyPoint = 50;
+	public:
+		ScavTrap( void );
+		ScavTrap(std::string name);
+		ScavTrap(ScavTrap const & _p1);
+		ScavTrap & operator = (const ScavTrap & _p1);
+		~ScavTrap( void );
+		void    attack(const std::string& target);
+		void    guardGate();
+};
+#endif
