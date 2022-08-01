@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/20 15:37:26 by zihirri           #+#    #+#              #
-#    Updated: 2022/06/20 18:51:59 by zihirri          ###   ########.fr        #
+#    Updated: 2022/08/01 20:16:10 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = megaphone
 
 CFLAGS = -Wall -Wextra -Werror
 
-CC = @g++
+CC = @c++
 
 RM = @rm -rf
 

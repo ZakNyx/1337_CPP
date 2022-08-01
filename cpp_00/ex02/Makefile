@@ -6,7 +6,7 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/25 19:57:28 by zihirri           #+#    #+#              #
-#    Updated: 2022/06/28 17:04:23 by zihirri          ###   ########.fr        #
+#    Updated: 2022/08/01 20:16:10 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = acc
 
 CFLAGS = -Wall -Wextra -Werror
 
-CC = @g++
+CC = @c++
 
 RM = @rm -rf
 

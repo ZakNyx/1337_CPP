@@ -1,16 +1,16 @@
-NAME = frag
+NAME = clap
 
 CFLAGS = -Wall -Wextra -Werror 
 
-CC = @g++
+CC = @c++
 
 RM = @rm -rf
 
 SRC =	main.cpp \
 		ClapTrap.cpp \
 		FragTrap.cpp \
-		DiamondTrap.cpp \
-		ScavTrap.cpp
+		ScavTrap.cpp \
+		DiamondTrap.cpp
 
 
 # Colors
@@ -22,10 +22,10 @@ C_RES = \033[0m
 all : $(NAME)
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-	@echo "$(C_GREEN)[FRAG COMPILED!]$(C_RES)"
+	@echo "$(C_GREEN)[DIAMOND COMPILED!]$(C_RES)"
 	
 fclean:	
 	$(RM) -f $(NAME)
-	@echo "$(C_RED)[FRAG REMOVED!]$(C_RES)"
+	@echo "$(C_RED)[DIAMOND REMOVED!]$(C_RES)"
 
 re : fclean all

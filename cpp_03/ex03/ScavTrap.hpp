@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:07:18 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 19:22:46 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 20:20:23 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public virtual ClapTrap{
+class ScavTrap: virtual public ClapTrap{
 	protected:
 		const static unsigned int _energyPoint = 50;
 	public:

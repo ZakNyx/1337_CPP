@@ -2,7 +2,7 @@ NAME = zombie
 
 CFLAGS = -Wall -Wextra -Werror
 
-CC = @g++
+CC = @c++
 
 RM = @rm -rf
 

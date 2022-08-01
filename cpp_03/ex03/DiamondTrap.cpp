@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 10:53:44 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 19:38:31 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 20:24:57 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,35 +15,40 @@
 DiamondTrap::DiamondTrap(void){}
 
 DiamondTrap::DiamondTrap(std::string name){
-    _Name= name;
-    ClapTrap::_Name= name+"_clap_name";
-    this->_Health = _hitPoint;
-    this->_Energy = _energyPoint;
-    this->_Damage = _attackDamage;
-    std::cout << "DiamondTrap Here" << std::endl;
+	_Name= name;
+	ClapTrap::_Name= name + "_clap_name";
+	this->_Health = this->FragTrap::_hitPoint;
+	this->_Energy = this->ScavTrap::_energyPoint;
+	this->_Damage = this->FragTrap::_attackDamage;
+	std::cout << "DiamondTrap Here" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const & _p1){
-    _Name = _p1._Name;
-    ClapTrap::_Name= _Name +"_clap_name";
-    _Health = _p1._hitPoint;
-    _Energy = _p1._energyPoint;
-    _Damage = _p1._attackDamage;
+	_Name = _p1._Name;
+	ClapTrap::_Name= _Name +"_clap_name";
+	_Health = _p1._Health;
+	_Energy = _p1._Energy;
+	_Damage = _p1._Damage;
 }
 
 DiamondTrap & DiamondTrap::operator = (const DiamondTrap & _p1){
-    _Name = _p1._Name;
-    ClapTrap::_Name= _Name +"_clap_name";
-    _Health = _p1._hitPoint;
-    _Energy = _p1._energyPoint;
-    _Damage = _p1._attackDamage;
-    
-    return *this;
+	_Name = _p1._Name;
+	ClapTrap::_Name= _Name +"_clap_name";
+	_Health = _p1._Health;
+	_Energy = _p1._Energy;
+	_Damage = _p1._Damage;
+	
+	return *this;
 }
+
 void DiamondTrap::whoAmI( void ){
-    std::cout << "I am" << _Name << ClapTrap::_Name << std::endl;
+	std::cout << "I am " << _Name <<" aka " << ClapTrap::_Name << std::endl;
+}
+
+void	DiamondTrap::attack(const std::string& target){
+	this->ScavTrap::attack(target);	
 }
 
 DiamondTrap::~DiamondTrap( void ){
-    std::cout << "DiamondTrap out !" << std::endl;
+	std::cout << "DiamondTrap out !" << std::endl;
 }
