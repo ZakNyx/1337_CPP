@@ -6,13 +6,15 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 10:53:44 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 20:24:57 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 22:45:17 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void){}
+DiamondTrap::DiamondTrap(void){
+	std::cout << "DiamondTrap Here" << std::endl;
+}
 
 DiamondTrap::DiamondTrap(std::string name){
 	_Name= name;
@@ -20,7 +22,7 @@ DiamondTrap::DiamondTrap(std::string name){
 	this->_Health = this->FragTrap::_hitPoint;
 	this->_Energy = this->ScavTrap::_energyPoint;
 	this->_Damage = this->FragTrap::_attackDamage;
-	std::cout << "DiamondTrap Here" << std::endl;
+	std::cout << "DiamondTrap Here !" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const & _p1){

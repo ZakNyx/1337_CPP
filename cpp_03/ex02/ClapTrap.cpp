@@ -6,15 +6,15 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 21:22:43 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/31 19:54:12 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 22:21:49 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( void ){}
+ClapTrap::ClapTrap( void ){std::cout << "ClapTrap here !" << std::endl;}
 
-ClapTrap::ClapTrap( std::string name ):_Name(name), _Health(10), _Energy(10), _Damage(0) {std::cout << "Constructor Called" << std::endl;}
+ClapTrap::ClapTrap( std::string name ):_Name(name), _Health(10), _Energy(10), _Damage(0) {std::cout << "ClapTrap here !" << std::endl;}
 
 ClapTrap::ClapTrap (ClapTrap const & _p1){
     _Name = _p1._Name;
@@ -65,5 +65,5 @@ void    ClapTrap::beRepaired(unsigned int amount){
 }
 
 ClapTrap::~ClapTrap( void ){
-    std::cout << "Descructor Called" << std::endl;
+    std::cout << "ClapTrap Out" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 21:22:55 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 20:44:17 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 22:22:33 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@
 int main(void){
     DiamondTrap d("Zak");
     d.whoAmI();
+    d.attack("Dummy");
 }

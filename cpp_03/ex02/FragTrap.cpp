@@ -6,13 +6,13 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 23:10:45 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 20:31:03 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 20:48:22 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap( void ){}
+FragTrap::FragTrap( void ){	std::cout<< "FragTrap here !" << std::endl;}
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name){
 	_Health = 100;

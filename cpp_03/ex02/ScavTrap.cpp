@@ -6,13 +6,13 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:07:08 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 20:30:52 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/01 20:47:48 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap( void ){}
+ScavTrap::ScavTrap( void ){std::cout<< "ScavTrap here !" << std::endl;}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
 	_Health = 100;
