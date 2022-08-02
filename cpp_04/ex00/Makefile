@@ -8,7 +8,10 @@ RM = @rm -rf
 
 SRC =	main.cpp \
 		Animal.cpp \
-
+		Dog.cpp \
+		Cat.cpp \
+		WrongCat.cpp \
+		WrongAnimal.cpp \
 
 # Colors
 C_RED = \033[1;31m
