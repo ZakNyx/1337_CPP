@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 18:39:03 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 14:30:47 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/02 12:14:18 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int main(void)
 			std::cout << "--> ADD | SEARCH | EXIT" << std::endl; 
 		}
 		else if (mode == "EXIT")
+			std::exit(0);
+		else if (std::cin.eof())
 			std::exit(0);
 	}
 	return (0);
