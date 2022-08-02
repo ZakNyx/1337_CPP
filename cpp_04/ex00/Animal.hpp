@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 17:56:06 by zak               #+#    #+#             */
-/*   Updated: 2022/08/02 13:07:29 by zihirri          ###   ########.fr       */
+/*   Created: 2022/08/02 13:07:16 by zihirri           #+#    #+#             */
+/*   Updated: 2022/08/02 13:09:23 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-Zombie *zombieHorde(int N, std::string name);
+#include <iostream>
+#include <string.h>
 
-int main( void )
-{
-	Zombie *zmb;
-	zmb = zombieHorde(10, "lmao");
-	for (int i = 0; i < 10; i++)
-		zmb[i].announce();
-	delete[] zmb;
-
-}
+class Animal{
+	protected :
+		std::string type;
+};
+#endif

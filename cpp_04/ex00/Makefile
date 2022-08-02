@@ -1,4 +1,4 @@
-NAME = diamond
+NAME = animal
 
 CFLAGS = -Wall -Wextra -Werror 
 
@@ -7,10 +7,7 @@ CC = @c++
 RM = @rm -rf
 
 SRC =	main.cpp \
-		ClapTrap.cpp \
-		FragTrap.cpp \
-		ScavTrap.cpp \
-		DiamondTrap.cpp
+		Animal.cpp \
 
 
 # Colors
@@ -22,10 +19,10 @@ C_RES = \033[0m
 all : $(NAME)
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-	@echo "$(C_GREEN)[DIAMOND COMPILED!]$(C_RES)"
+	@echo "$(C_GREEN)[ANIMAL COMPILED!]$(C_RES)"
 	
 fclean:	
 	$(RM) -f $(NAME)
-	@echo "$(C_RED)[DIAMOND REMOVED!]$(C_RES)"
+	@echo "$(C_RED)[ANIMAL REMOVED!]$(C_RES)"
 
 re : fclean all

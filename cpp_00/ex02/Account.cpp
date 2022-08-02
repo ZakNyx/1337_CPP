@@ -6,13 +6,14 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 19:57:19 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/28 17:23:30 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/02 14:15:48 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
 #include <ctime>
+#include <iomanip>
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
@@ -24,8 +25,12 @@ void	Account::_displayTimestamp( void )
 	time_t now = time(0);
 	
 	tm *ltm = localtime(&now);
-	std::cout << "["<< 1900+ ltm->tm_year <<1+ltm->tm_mon<< ltm->tm_mday
-		<< "_" << ltm->tm_hour << ltm->tm_min << ltm->tm_sec << "]";
+	std::cout << "["<< 1900+ ltm->tm_year;
+		std::cout << std::setw(2) << std::setfill('0') << 1+ltm->tm_mon;
+		std::cout << std::setw(2) << std::setfill('0') << ltm->tm_mday << "_";
+		std::cout << std::setw(2) << std::setfill('0') << ltm->tm_hour;
+		std::cout << std::setw(2) << std::setfill('0') << ltm->tm_min;
+		std::cout << std::setw(2) << std::setfill('0') << ltm->tm_sec << "]";
 }
 
 Account::Account( int initial_deposit )
