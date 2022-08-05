@@ -6,13 +6,13 @@
 #    By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 17:26:06 by zihirri           #+#    #+#              #
-#    Updated: 2022/08/01 20:16:10 by zihirri          ###   ########.fr        #
+#    Updated: 2022/08/05 12:41:25 by zihirri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombie
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 CC = @c++
 

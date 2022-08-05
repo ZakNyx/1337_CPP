@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 19:57:19 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/02 14:15:48 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/04 17:41:11 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,11 +101,11 @@ bool	Account::makeWithdrawal( int withdrawal )
 	if (this->_amount < withdrawal)
 	{
 		std::cout << "refused" << std::endl;
-		return 0;
+		return (false);
 	}
 	this->_amount -= withdrawal;
 	this->_totalNbWithdrawals++;
 	this->_nbWithdrawals++;
 	std::cout << withdrawal << ";amount:" << this->_amount << ";nb_withdrawals:" << this->_nbWithdrawals << std::endl;
-	return 1;
+	return (true);
 }

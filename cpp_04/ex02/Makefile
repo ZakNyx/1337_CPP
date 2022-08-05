@@ -1,6 +1,6 @@
 NAME = animal
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -std=c++98
 
 CC = @c++
 
@@ -10,6 +10,7 @@ SRC =	main.cpp \
 		Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
+		Brain.cpp \
 		WrongCat.cpp \
 		WrongAnimal.cpp \
 

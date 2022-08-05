@@ -1,6 +1,6 @@
 NAME = zombie
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 CC = @c++
 

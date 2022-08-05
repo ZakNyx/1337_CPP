@@ -1,14 +1,18 @@
-NAME = harlFilter
+NAME = animal
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 CC = @c++
 
 RM = @rm -rf
 
 SRC =	main.cpp \
-		Harl.cpp
-
+		Animal.cpp \
+		Dog.cpp \
+		Cat.cpp \
+		Brain.cpp \
+		WrongCat.cpp \
+		WrongAnimal.cpp \
 
 # Colors
 C_RED = \033[1;31m
@@ -19,10 +23,10 @@ C_RES = \033[0m
 all : $(NAME)
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-	@echo "$(C_GREEN)[HARLFILTER COMPILED!]$(C_RES)"
+	@echo "$(C_GREEN)[ANIMAL COMPILED!]$(C_RES)"
 	
 fclean:	
 	$(RM) -f $(NAME)
-	@echo "$(C_RED)[HARLFILTER REMOVED!]$(C_RES)"
+	@echo "$(C_RED)[ANIMAL REMOVED!]$(C_RES)"
 
 re : fclean all
