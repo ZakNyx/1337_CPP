@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:06:04 by zak               #+#    #+#             */
-/*   Updated: 2022/07/09 18:49:34 by zak              ###   ########.fr       */
+/*   Updated: 2022/08/05 12:43:42 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,4 @@ void Replace::run(std::string oldStr, std::string newStr, std::string fileName)
 	}
 	std::cout << string << std::endl;
 	write << string;
+}
