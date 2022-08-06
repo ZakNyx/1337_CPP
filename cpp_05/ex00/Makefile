@@ -15,6 +15,7 @@ C_L_BLUE = \033[1;34m
 C_RES = \033[0m
 
 all : $(NAME)
+
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 	@echo "$(C_GREEN)[BUREAUCRAT COMPILED!]$(C_RES)"
