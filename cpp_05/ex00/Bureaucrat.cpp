@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:21 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/06 16:16:02 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/06 18:38:28 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Bureaucrat::Bureaucrat( void ){
 	std::cout << "Bureaucrat constructor Called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat( int grade )
+Bureaucrat::Bureaucrat( int grade, std::string name ) : _name(name)
 {
 	if ( grade > 150 )
 		throw Bureaucrat::GradeTooLowException();
@@ -37,7 +37,7 @@ Bureaucrat & Bureaucrat::operator = (Bureaucrat const & _p1){
 }
 
 Bureaucrat::~Bureaucrat( void ){
-	std::cout << "Bureaucrat destructor Celled" << std::endl;
+	std::cout << "Bureaucrat: " << this->getName() << "'s destructor Called" << std::endl;
 }
 
 std::string Bureaucrat::getName( void ) const {
@@ -55,22 +55,23 @@ void	Bureaucrat::increment( void ){
 		this->_grade--;
 }
 
-void	Bureaucrat::decrement( void ){
+void	Bureaucrat::decrement( void ) {
 	if (this->_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->_grade++;
 }
 
-char* Bureaucrat::GradeTooHighException::what( void ){
-	std::cout << "Grade is too High !" << std::endl;
+const char * Bureaucrat::GradeTooHighException::what() const throw() {
+	return "Grade is too High !";
 }
 
-char* Bureaucrat::GradeTooLowException::what( void ){
-	std::cout << "Grade is too Low !" << std::endl;
+const char * Bureaucrat::GradeTooLowException::what() const throw() {
+	return "Grade is too Low !";
 }
 
 std::ostream & operator << (  std::ostream & os, Bureaucrat const & _n1 ){
-	os << _n1;
+	os << _n1.getName();
+	os << _n1.getGrade();
 	return (os);
 }

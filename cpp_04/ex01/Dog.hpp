@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 15:23:40 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/04 17:27:38 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/06 17:42:06 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class Dog: public Animal{
 		Brain *newBrain;
     public:
         Dog( void );
-		~Dog( void );
+		virtual ~Dog( void );
 		Dog(Dog const & _p1);
 		Dog & operator = (Dog const & _p1);
-		void makeSound( void ) const;
+		virtual void makeSound( void ) const;
 };
 #endif

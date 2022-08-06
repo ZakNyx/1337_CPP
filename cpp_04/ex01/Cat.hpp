@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 15:23:32 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/04 17:02:40 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/06 17:42:03 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class Cat: public Animal{
 		Brain *newBrain;
     public:
         Cat( void );
-		~Cat( void );
+		virtual ~Cat( void );
 		Cat(Cat const & _p1);
 		Cat & operator = (Cat const & _p1);
-		void makeSound( void ) const;
+		virtual void makeSound( void ) const;
 };
 #endif

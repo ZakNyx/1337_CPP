@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 13:07:16 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/04 21:40:15 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/06 17:40:54 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Animal{
 		std::string type;
 	public :
 		Animal( void );
-		virtual ~Animal( void ) = 0;
+		virtual ~Animal( void );
 		Animal(Animal const & _p1);
 		Animal & operator = (Animal const & _p1);
 		std::string getType( void ) const;
