@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 15:23:28 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/04 18:03:40 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:40:32 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Cat::Cat(Cat const & _p1){
 }
 
 Cat & Cat::operator = (Cat const & _p1){
+	this->newBrain = _p1.newBrain;
 	this->type = _p1.type;
 	return (*this);
 }
