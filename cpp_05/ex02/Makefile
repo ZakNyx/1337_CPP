@@ -9,6 +9,10 @@ RM = @rm -rf
 SRC =	main.cpp \
 		Bureaucrat.cpp \
 		Form.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp
+		
 # Colors
 C_RED = \033[1;31m
 C_GREEN = \033[1;32m

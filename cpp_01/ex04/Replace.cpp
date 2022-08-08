@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:06:04 by zak               #+#    #+#             */
-/*   Updated: 2022/08/05 12:43:42 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/08 18:01:45 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Replace::Replace( void )
 {
-	
 }
 
 Replace::~Replace( void )
@@ -28,7 +27,6 @@ void Replace::run(std::string oldStr, std::string newStr, std::string fileName)
 	std::string string;
 	std::fstream read(fileName);
 	unsigned long i = 0;
-	unsigned long str = string.length();
 	
 	if (!read)
 	{
@@ -37,15 +35,18 @@ void Replace::run(std::string oldStr, std::string newStr, std::string fileName)
 	}
 	std::ofstream write(fileName + ".replace");
 	string.assign(std::istreambuf_iterator<char>(read), std::istreambuf_iterator<char>());
-	while (i < str)
+	unsigned long str = string.length();
+	while ( i < str )
 	{
 		if (string.compare(i, oldStr.length(), oldStr) == 0)
 		{
+			std::cout << i << " " << str << " " << oldStr.length() << std::endl;
 			string.erase(i, oldStr.length());
 			string.insert(i, newStr);
 		}
 		i++;
 	}
-	std::cout << string << std::endl;
-	write << string;
+		write << string;
+	//std::cout << string << std::endl;
+	
 }
