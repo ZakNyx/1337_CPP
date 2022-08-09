@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/08 18:24:36 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/09 15:26:59 by zihirri          ###   ########.fr       */
+/*   Created: 2022/08/08 18:24:30 by zihirri           #+#    #+#             */
+/*   Updated: 2022/08/09 15:02:11 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBERRYCREATIONFORM_HPP       
-# define SHRUBERRYCREATIONFORM_HPP
-#include <fstream>
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
+
 #include "Form.hpp"
 
-class ShrubberyCreationForm : public Form{
+class RobotomyRequestForm : public Form{
 		private:
 			std::string	_target;
 		public:
-			ShrubberyCreationForm( void );
-			ShrubberyCreationForm ( std::string Target);
-			ShrubberyCreationForm ( ShrubberyCreationForm const & _p1);
-			ShrubberyCreationForm & operator = ( ShrubberyCreationForm const & _p1 );
-			void	execute(Bureaucrat const & executor) const;
-			~ShrubberyCreationForm( void );
+			RobotomyRequestForm( void );
+			RobotomyRequestForm ( std::string Target);
+			RobotomyRequestForm ( RobotomyRequestForm const & _p1);
+			RobotomyRequestForm & operator = ( RobotomyRequestForm const & _p1 );
+				void	execute(Bureaucrat const & executor) const;
+			~RobotomyRequestForm( void );
 };
 #endif
