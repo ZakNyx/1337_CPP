@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:29 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/08 14:42:55 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/09 15:09:19 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class Bureaucrat{
 		void	decrement( void );
 		void	signForm( Form & _p1 );
 
+		void	executeForm(Form const & form);
 		class GradeTooHighException : public std::exception {
 			public :
 				virtual const char * what() const throw();

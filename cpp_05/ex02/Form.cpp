@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 19:55:40 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/08 14:20:33 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/09 13:25:55 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ const char *Form::GradeTooHighException::what() const throw(){
 
 const char *Form::GradeTooLowException::what() const throw(){
 	return "Grade is too Low !";
+}
+
+const char *Form::FormNotSigned::what() const throw(){
+	return "Form isn't Signed !";
 }
 
 void Form::beSigned(Bureaucrat &prsn){

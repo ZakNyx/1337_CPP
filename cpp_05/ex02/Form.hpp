@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 19:55:45 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/08 19:02:07 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/09 13:25:03 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ class Form{
 		};
 		
 		class GradeTooLowException : public std::exception {
+			public :
+				virtual const char * what() const throw();
+		};	
+		
+		class FormNotSigned : public std::exception {
 			public :
 				virtual const char * what() const throw();
 		};	
