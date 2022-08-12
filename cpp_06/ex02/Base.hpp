@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serialization.hpp                                  :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/10 21:23:42 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/12 11:42:50 by zihirri          ###   ########.fr       */
+/*   Created: 2022/08/12 12:06:53 by zihirri           #+#    #+#             */
+/*   Updated: 2022/08/12 17:53:50 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZATION_HPP
-# define SERIALIZATION_HPP
+#ifndef BASE_HPP
+# define BASE_HPP
 
-#include <iostream>
 #include <string>
-#include <cstdint>
-
-struct Data{
-	int			_dataInt;
-	std::string	_dataStr;
+#include <iostream>
+#include <cstdlib>
+class Base{
+	public:
+		virtual ~Base( void );
 };
 
-#endif
+#endif // BASE_HPP

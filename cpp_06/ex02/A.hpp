@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serialization.hpp                                  :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/10 21:23:42 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/12 11:42:50 by zihirri          ###   ########.fr       */
+/*   Created: 2022/08/12 12:06:42 by zihirri           #+#    #+#             */
+/*   Updated: 2022/08/12 12:18:24 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZATION_HPP
-# define SERIALIZATION_HPP
+#ifndef A_HPP
+# define A_HPP
 
-#include <iostream>
-#include <string>
-#include <cstdint>
-
-struct Data{
-	int			_dataInt;
-	std::string	_dataStr;
+#include "Base.hpp"
+class A : public Base{
+	
 };
-
-#endif
+#endif // A_HPP

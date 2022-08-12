@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 21:22:06 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/12 11:21:35 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/12 12:03:08 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,17 @@ Data*		deserialize(uintptr_t raw);
 
 int main( void )
 {
-	Data *ptr;
-	ptr->_dataInt = 1337;
-	ptr->_dataStr = "Hello World !";
-	uintptr_t test  = serialize(ptr);
-	std::cout << "Int : " << ptr->_dataInt << "String :" << ptr->_dataStr << test << std::endl;
+	Data		ptr;
+	uintptr_t	before;
+	Data		*after;
+	
+	ptr._dataInt = 1337;
+	ptr._dataStr = "Hello";
+	
+	std::cout << "Before Serialization / Deserialization : " << ptr._dataInt << " " << ptr._dataStr <<  std::endl;
+	
+	before  = serialize(&ptr);
+	after = deserialize(before);
+	
+	std::cout << "After Serialization / Deserialization : " << after->_dataInt << " " << after->_dataStr <<  std::endl;
 }

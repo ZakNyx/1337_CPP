@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serialization.hpp                                  :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/10 21:23:42 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/12 11:42:50 by zihirri          ###   ########.fr       */
+/*   Created: 2022/08/12 12:06:51 by zihirri           #+#    #+#             */
+/*   Updated: 2022/08/12 17:52:37 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZATION_HPP
-# define SERIALIZATION_HPP
+#include "Base.hpp"
 
-#include <iostream>
-#include <string>
-#include <cstdint>
-
-struct Data{
-	int			_dataInt;
-	std::string	_dataStr;
-};
-
-#endif
+Base::~Base( void ){
+}
