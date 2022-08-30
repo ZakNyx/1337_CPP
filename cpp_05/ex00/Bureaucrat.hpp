@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:29 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/06 18:08:17 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/30 19:07:33 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ class Bureaucrat{
 				virtual const char * what() const throw();
 		};	
 };
-	std::ostream & operator<<( std::ostream & os, Bureaucrat const & _n1);
+	std::ostream & operator << ( std::ostream & os, Bureaucrat const & _n1);
 #endif //BUREAUCRAT_HPP
