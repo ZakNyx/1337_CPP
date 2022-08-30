@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 15:18:57 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/13 17:10:15 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/13 17:11:03 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void str_toupper(std::string str)
 }
 
 template < typename type >
-type	iter(type arr, type size, type func()){
+type	iter(type &arr, type size, type func()){
 	int i = 0;
 	while (i < size)
 	{
@@ -39,6 +39,6 @@ type	iter(type arr, type size, type func()){
 int main( void ){
 	
 	std::string a = "abc";
-	::iter (&a, 4, str_toupper);
+	::iter (a, 1, str_toupper);
 	
 }
