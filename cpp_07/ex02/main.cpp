@@ -6,12 +6,12 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 10:25:55 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/30 15:51:11 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/30 16:25:04 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <Array.hpp>
+#include "Array.hpp"
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -25,7 +25,7 @@ int main(int, char**)
         numbers[i] = value;
         mirror[i] = value;
     }
-    //SCOPE
+    // SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);

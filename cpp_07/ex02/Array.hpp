@@ -6,15 +6,12 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 10:25:52 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/30 15:50:42 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/08/30 16:24:54 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
-
-#include <iostream>
-#include <string>
 
 template <typename T>
 class Array{
@@ -23,45 +20,43 @@ class Array{
 		T				*_array;
 		unsigned int	_size;
 	public:
-		Array( void ) : _array(new T[]()), _size(0){};
+		Array( void ) : _array(new T[0]()), _size(0){};
 
 		Array(unsigned int n): _array(new T[n]()), _size(n){};
 
 		Array(Array const & _p1){
 			unsigned int _s = 0;
-			this->_array = new T(_p1._size);
+			this->_array = new T[_p1._size];
 			this->_size = _p1._size;
-			while (i < _p1._size){
-				this->_array[i] = _p1._array[i];
-				i++;
+			while (_s < _p1._size){
+				this->_array[_s] = _p1._array[_s];
+				_s++;
 			}
 		};
 		
 		Array & operator = (Array const & _p1){
 			unsigned int _s = 0;
-			this->_array = new T(_p1._size);
+			this->_array = new T[_p1._size];
 			this->_size = _p1._size;
-			while (i < _p1._size){
-				this->_array[i] = _p1._array[i];
-				i++;
+			while (_s < _p1._size){
+				this->_array[_s] = _p1._array[_s];
+				_s++;
 			}
-			this (*this);
+			return (this);
 		};
 		
 		class Objection : public std::exception{
 			public :
 				virtual const char * what() const throw(){
-					std::cout << "The Index is out of bound !" << std::endl;
+					return ("The Index is out of bound !");
 				};
 		};
 		
 		T & operator [] ( unsigned int position){
-		try{
 			if( this->_size <= position ){
 				throw Objection();
 			}
-			return (this._array[position]);
-         }
+			return (this->_array[position]);
 		}
 		
 		unsigned int	getSize( void ){
