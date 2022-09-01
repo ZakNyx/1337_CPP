@@ -5,27 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 18:27:39 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/31 12:13:28 by zihirri          ###   ########.fr       */
+/*   Created: 2022/08/31 19:58:56 by zihirri           #+#    #+#             */
+/*   Updated: 2022/09/01 17:25:15 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <iostream>     // std::cout
-#include <algorithm>    // std::find_if
-#include <vector>       // std::vector
-#include "easyfind.hpp"
+#include "Span.hpp"
 
 int main()
 {
-	std::vector<int> myvector;
-
-	myvector.push_back(16);
-	myvector.push_back(16);
-	myvector.push_back(40);
-	myvector.push_back(55);
-	
-	easyfind(myvector, 15);
-
-	return 0;
+	Span sp = Span(5);
+	sp.addNumber(17);
+	sp.addNumber(17);
+	// sp.addNumber(1);
+	// sp.addNumber(17);
+	// sp.addNumber(3);
+	// std::vector<int> test;
+	// test.push_back(10);
+	// test.push_back(20);
+	// test.push_back(30);
+	// sp.fillSpan(test);
+	try{
+	 	std::cout << sp.shortestSpan() << std::endl;
+	 }
+	catch (std::exception &e){
+	 	std::cout << e.what();
+	}
 }

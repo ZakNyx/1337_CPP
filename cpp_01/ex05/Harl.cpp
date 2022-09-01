@@ -3,24 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:52:49 by zak               #+#    #+#             */
-/*   Updated: 2022/07/11 19:50:26 by zak              ###   ########.fr       */
+/*   Updated: 2022/08/31 20:17:37 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-Harl::Harl( void )
-{
-	
-}
+Harl::Harl( void ){}
 
-Harl::~Harl( void )
-{
-	
-}
+Harl::~Harl( void ){}
+
 void Harl::debug( void )
 {
 	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
