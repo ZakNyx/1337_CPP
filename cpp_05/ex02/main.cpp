@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:50 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/09 15:26:09 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/01 19:10:34 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main( void )
 {
 	try {
 		ShrubberyCreationForm	chajara("chajara");
-		Bureaucrat test0(15, "Zak");
+		Bureaucrat test0(149, "Zak");
 		test0.signForm(chajara);
 		test0.executeForm(chajara);
 	}

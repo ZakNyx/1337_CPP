@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 18:19:36 by zak               #+#    #+#             */
-/*   Updated: 2022/07/07 19:57:43 by zak              ###   ########.fr       */
+/*   Updated: 2022/09/02 12:50:56 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void HumanB::attack(void)
 {
+	if (!	this->weaponB)
+    {
+        std::cout << this->name << " is unable to attack" << std::endl;
+        return ;
+    }
 	std::cout << this->name << " attacks with their " << weaponB->getType() << std::endl;
 }
 

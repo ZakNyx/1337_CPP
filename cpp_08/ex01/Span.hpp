@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 13:47:05 by zihirri           #+#    #+#             */
-/*   Updated: 2022/09/01 17:25:42 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/02 11:44:12 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Span{
 		Span & operator = (Span const & _p1);
 
 		void	addNumber(unsigned int add);
-		void	fillSpan(std::vector<int> values);
+		void	addNumber(std::vector<int> values);
 		unsigned int	shortestSpan( void );
 		unsigned int	longestSpan( void );
 		class TooManyElements : public std::exception{

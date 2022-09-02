@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 13:47:00 by zihirri           #+#    #+#             */
-/*   Updated: 2022/09/01 17:27:17 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/02 11:44:01 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ unsigned int    Span::longestSpan( void ){
 	return (max - min);
 }
 
-void	Span::fillSpan(std::vector<int> values){
+void	Span::addNumber(std::vector<int> values){
 	if (values.size() > this->_store)
 		throw Span::TooManyElements();
 	for	(std::vector<int>::iterator it = values.begin(); it != values.end(); it++){
