@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:26:39 by zihirri           #+#    #+#             */
-/*   Updated: 2022/06/28 21:26:49 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/05 18:49:55 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #include <iostream>
 
 class Zombie {
-    
-    
     private:
         std::string name;
     

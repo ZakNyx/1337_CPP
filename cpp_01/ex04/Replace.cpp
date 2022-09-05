@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:06:04 by zak               #+#    #+#             */
-/*   Updated: 2022/09/05 12:17:34 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/05 20:07:27 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void Replace::run(std::string oldStr, std::string newStr, std::string fileName)
 		{
 			string.erase(i, oldStr.length());
 			string.insert(i, newStr);
+			i += newStr.length();
+			continue;
 		}
 		i++;
 	}
