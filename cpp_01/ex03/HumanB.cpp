@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 18:19:36 by zak               #+#    #+#             */
-/*   Updated: 2022/09/02 12:50:56 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/05 11:50:46 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void HumanB::attack(void)
 {
-	if (!	this->weaponB)
+	if (!this->weaponB)
     {
         std::cout << this->name << " is unable to attack" << std::endl;
         return ;

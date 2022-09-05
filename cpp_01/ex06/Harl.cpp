@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 19:19:14 by zak               #+#    #+#             */
-/*   Updated: 2022/08/09 17:25:51 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/05 12:04:44 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void Harl::complain(std::string level)
 				(this->*scream[n])();
 				std::cout << std::endl;
 				break;
-			case -1:
+			default:
 				std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 				return;
 		}
