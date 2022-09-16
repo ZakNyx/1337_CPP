@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:50 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/06 18:41:14 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/12 12:39:32 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ int main( void )
 		std::cout << test0.getName() << " " <<test0.getGrade() << std::endl;
 		test0.decrement();
 		std::cout << test0.getName() << " " <<test0.getGrade() << std::endl;
+		test0.decrement();
+		std::cout << test0.getName() << " " <<test0.getGrade() << std::endl;
 	}
 	catch (std::exception & e)
 	{
 		std::cout << e.what() << std::endl;
-	}
-
+	}	
 	try {
 		Bureaucrat test1(1, "The less clever Zak");
-		test1.decrement();
-		std::cout << test1.getName() << " " << test1.getGrade() << std::endl;
+		test1.decrement();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 		test1.increment();
 		std::cout << test1.getName() << " " << test1.getGrade() << std::endl;
 		test1.increment();
@@ -46,7 +46,7 @@ int main( void )
 	catch (std::exception & e)
 	{
 		std::cout << e.what() << std::endl;
-	}
+	} 
 	
 	try {
 		Bureaucrat test3(0, "Zakn't");

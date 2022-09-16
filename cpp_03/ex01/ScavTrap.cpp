@@ -6,19 +6,19 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 14:07:08 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 22:21:26 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/10 12:10:56 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name){std::cout<< "ScavTrap here !" << std::endl;}
+ScavTrap::ScavTrap( void ) {std::cout<< "ScavTrap here !" << std::endl;}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
 	_Health = 100;
 	_Energy = 50;
 	_Damage = 20;
-	std::cout<< "ScavTrap here !" << std::endl;
+	std::cout << "ScavTrap here !" << std::endl;
 }
 
 ScavTrap::~ScavTrap( void ){std::cout<< "ScavClap out !	" << std::endl;}

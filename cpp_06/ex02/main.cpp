@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 12:17:30 by zihirri           #+#    #+#             */
-/*   Updated: 2022/09/02 13:51:10 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/13 16:51:55 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Base * generate(void){
 	else
 		return (new C());
 }
-
+	// Returns the adress or the value NULL if the dynamic cas† isn't possible
 void	identify(Base* p){
 	if (A* ptr = dynamic_cast<A*>(p))
 		std::cout << "I am clearly Class A" << std::endl;
@@ -38,7 +38,7 @@ void	identify(Base* p){
 	else
 		std::cout << "Check your input please KEKW" << std::endl;
 }
-
+// Throws an exception if the dynamic cast isn't possible  
 void	identify(Base& p){
 	try {
 		A& ptr = dynamic_cast<A&>(p);
@@ -46,32 +46,38 @@ void	identify(Base& p){
 		(void)ptr;
 		return;
 	}
-	catch(std::bad_cast){}
+	catch(std::bad_cast){
+	}
 	try {
 		B& ptr = dynamic_cast<B&>(p);
 		std::cout << "I am clearly Class B" << std::endl;
 		(void)ptr;
 		return;
 	}
-	catch(std::bad_cast){}
+	catch(std::bad_cast){
+	}
 	try {
 		C& ptr = dynamic_cast<C&>(p);
 		std::cout << "I am clearly Class C" << std::endl;
 		(void)ptr;
 		return;
 	}
-	catch(std::bad_cast){}
+	catch(std::bad_cast){
+	}
 }
 
 int main(void){
-	A _A;
-	B _B;
-	C _C;
-	
+	A	_A;
+	B	_B;
+	C	_C;
+
 	identify(&_A);
 	identify(&_B);
 	identify(&_C);
+
+	std::cout << std::endl;
 	identify(generate());
+	std::cout << std::endl;
 	identify(_A);
 	identify(_B);
 	identify(_C);

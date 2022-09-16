@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 16:45:46 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/09 18:08:10 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:46:25 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ Intern::Intern( void ){
 	std::cout << "Intern Spawned !" << std::endl;
 }
 
-Intern::Intern ( Intern const & _p1){}
+Intern::Intern ( Intern const & _p1){(void)_p1;}
 
-Intern & Intern::operator = ( Intern const & _p1 ){return (*this);}
+Intern & Intern::operator = ( Intern const & _p1 ){(void)_p1; return (*this);}
 
 Form	*Intern::getShrubbery(std::string _target){
 	return (new ShrubberyCreationForm(_target));
@@ -44,7 +44,7 @@ Form	*Intern::makeForm(std::string _formName, std::string _target){
 			return(this->*_form[n])(_target);
 		n++;
 	}
-	std::cout << "Invalid form type !" << std::endl;
+	std::cout << "Invalid form type ! <ShrubberyCreationForm, PresidentialPardonForm, RobotomyRequestForm>" << std::endl;
 	return (NULL);
 }
 

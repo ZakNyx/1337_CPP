@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 13:47:00 by zihirri           #+#    #+#             */
-/*   Updated: 2022/09/02 11:44:01 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/15 15:45:56 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ Span::Span( void ){}
 Span::Span( unsigned int _n) : _store(_n) {}
 
 Span::Span(Span const & _p1){
+	this->vec = _p1.vec;
 	this->_store = _p1._store;
 }
 
 Span & Span::operator = (Span const & _p1){
 	this->_store = _p1._store;
-
+	this->vec = _p1.vec;
 	return (*this);
 }
 
@@ -33,26 +34,21 @@ void	Span::addNumber(unsigned int add){
 		throw Span::TooManyElements();
 }
 
-unsigned int    Span::shortestSpan( void ){
-	int min = 0;
-	int secondMin = 0;
-	
-	if (this->vec.empty() || this->vec.size() == 1)
-		throw Span::NoNumberStored();
-	else
-	{
-		std::vector<int> vector = this->vec;// Copying the main vector into another one
-		min = *min_element(vector.begin(), vector.end());
-		sort(vector.begin(), vector.end()); // Sorting the copy
-		
-		for(std::vector<int>::iterator it = vector.begin(); it != vector.end(); it++){
-			if (*it > min){
-					secondMin = *it; //Finding the second smallest number
-				return secondMin - min;
-			}
-		}
-	}
-	return (min - min);
+unsigned int Span::shortestSpan(){
+    if(this->vec.size() <= 1)
+        throw TooManyElements();
+    else
+    {
+        std::vector<int> vcopy(this->vec);
+        std::sort(vcopy.begin(), vcopy.end());
+        int shortestSpan = vcopy[1] - vcopy[0];
+        for (unsigned int i = 2; i < vcopy.size(); i++)
+        {
+            if (vcopy[i] - vcopy[i - 1] < shortestSpan)
+                shortestSpan = vcopy[i] - vcopy[i - 1];
+        }
+        return (shortestSpan);
+    }
 }
 
 unsigned int    Span::longestSpan( void ){

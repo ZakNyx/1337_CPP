@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 19:55:40 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/09 13:25:55 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:37:33 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ Form::Form(std::string name, const int gts, const int gte) : _name(name), _grade
 Form::Form(Form const &_p1) : _name(_p1._name), _gradeToSigne(_p1._gradeToSigne), _gradeToExecute(_p1._gradeToExecute), _isSigned(_p1._isSigned) {}
 
 Form &Form::operator=(Form const &_p1){
-	this->_name = _p1._name;
 	this->_isSigned = _p1._isSigned;
 	return (*this);
 }

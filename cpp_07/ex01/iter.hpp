@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 template<typename T>
-void	iter(T *_Array, int _Size, void (*func)(const T &))
+void	iter(T *_Array, int _Size, void (*func)(T &))
 {
     if (_Array == NULL)
         return;

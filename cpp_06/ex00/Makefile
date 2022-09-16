@@ -1,4 +1,4 @@
-NAME = array
+NAME = exec
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -6,8 +6,8 @@ CC = @c++
 
 RM = @rm -rf
 
-SRC =	main.cpp 
-		
+SRC =	main.cpp \
+
 # Colors
 C_RED = \033[1;31m
 C_GREEN = \033[1;32m
@@ -18,10 +18,10 @@ all : $(NAME)
 
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-	@echo "$(C_GREEN)[ARRAY COMPILED!]$(C_RES)"
+	@echo "$(C_GREEN)[SERIALIZATION COMPILED!]$(C_RES)"
 	
 fclean:	
 	$(RM) -f $(NAME)
-	@echo "$(C_RED)[ARRAY REMOVED!]$(C_RES)"
+	@echo "$(C_RED)[SERIALIZATION REMOVED!]$(C_RES)"
 
 re : fclean all

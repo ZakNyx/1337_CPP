@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 22:51:57 by zihirri           #+#    #+#             */
-/*   Updated: 2022/07/30 21:07:19 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/09 13:08:47 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Fixed Point::getY( void ) const{
 Fixed	Point::area(Point const & x, Point const & y) const
 {
     Fixed half(0.5f);
-    Fixed area (half * (this->getX() * (x.getY() - y.getY()) + x.getX() * (this->getY() - y.getY()) + y.getX() * (this->getY() - x.getY())));
+    Fixed area (half * (this->getX() * (x.getY() - y.getY()) + x.getX() * (y.getY()-this->getY()) + y.getX() * (this->getY() - x.getY())));
     
     if (area < 0)
         area = area * -1;

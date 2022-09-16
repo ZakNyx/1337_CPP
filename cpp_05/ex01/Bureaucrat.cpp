@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:21 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/09 15:15:20 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/12 12:52:26 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat::Bureaucrat( int grade, std::string name ) : _name(name)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		this->_grade = grade;
-	std::cout << "Bureaucrat !" << std::endl;
+	std::cout << "Bureaucrat " << this->_name << "'s Constuctor has been called !" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & _p1): _name(_p1._name){
@@ -76,7 +76,7 @@ void	Bureaucrat::signForm( Form & _p1 ){
 		std::cout << this->getName() << " signed " << _p1.getName() << std::endl;
 	}
 	catch (std::exception & e){
-		std::cout << this->getName() << " couldn't sign " << _p1.getName() << " because " << e.what() << std::endl;
+		std::cout << this->getName() << " couldn't sign " << _p1.getName() << " because their " << e.what() << std::endl;
 	}
 }
 

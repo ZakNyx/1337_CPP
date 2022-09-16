@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 13:07:18 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/04 18:05:45 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/11 19:27:16 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,32 +21,15 @@ const Animal* j = new Dog();
 const Animal* i = new Cat();
 delete j;//should not create a leak
 delete i;
-return 0;
-
+Animal *animal[10];
+    for(int i = 0; i < 5; i++)
+        animal[i] = new Dog();
+        
+    for(int i = 5; i < 10; i++)
+        animal[i] = new Cat();
+    
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << animal[i]->getType() << std::endl;
+    }
 }
-// int main()
-// {
-//     const Animal* meta = new Animal();
-//     const Animal* j = new Dog();
-//     const Animal* i = new Cat();
-//     std::cout << "The animal type is : " << j->getType() << " " << std::endl;
-//     std::cout << "The animal type is : " << i->getType() << " " << std::endl;
-//     i->makeSound(); //will output the cat sound!
-//     j->makeSound();
-//     meta->makeSound();
-//     return 0;
-// }
-
-
-// int main()
-// {
-//     const Animal* meta = new Animal();
-//     const Animal* j = new Dog();
-//     const WrongAnimal* i = new WrongCat();
-//     std::cout << j->getType() << " " << std::endl;
-//     std::cout << i->getType() << " " << std::endl;
-//     i->makeSound(); //will output the cat sound!
-//     j->makeSound();
-//     meta->makeSound();
-//     return 0;
-// }

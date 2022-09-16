@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 18:27:39 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/31 12:13:28 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/13 20:04:25 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,11 @@
 
 int main()
 {
-	std::vector<int> myvector;
-
-	myvector.push_back(16);
-	myvector.push_back(16);
-	myvector.push_back(40);
-	myvector.push_back(55);
+	int	const				amounts[]	= { 42, 54, 957, 432, 1234, 0, 754, 16576 };
+	size_t const			amounts_size( sizeof(amounts) / sizeof(int) );
+	std::vector<int>		myvector( amounts, amounts + amounts_size );
 	
-	easyfind(myvector, 15);
+	easyfind(myvector, 0); 
 
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 21:22:43 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 22:21:49 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/10 15:17:55 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,5 @@ void    ClapTrap::beRepaired(unsigned int amount){
 }
 
 ClapTrap::~ClapTrap( void ){
-    std::cout << "ClapTrap Out" << std::endl;
+    std::cout << "ClapTrap Out !" << std::endl;
 }

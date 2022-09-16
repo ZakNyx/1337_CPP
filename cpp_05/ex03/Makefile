@@ -11,7 +11,8 @@ SRC =	main.cpp \
 		Form.cpp \
 		PresidentialPardonForm.cpp \
 		RobotomyRequestForm.cpp \
-		ShrubberyCreationForm.cpp
+		ShrubberyCreationForm.cpp \
+		Intern.cpp
 		
 # Colors
 C_RED = \033[1;31m

@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 21:22:06 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/12 12:03:08 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/13 16:39:59 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ int main( void )
 	
 	ptr._dataInt = 1337;
 	ptr._dataStr = "Hello";
-	
-	std::cout << "Before Serialization / Deserialization : " << ptr._dataInt << " " << ptr._dataStr <<  std::endl;
-	
+		
 	before  = serialize(&ptr);
 	after = deserialize(before);
 	
-	std::cout << "After Serialization / Deserialization : " << after->_dataInt << " " << after->_dataStr <<  std::endl;
+	std::cout << "Serialize  : " << before << std::endl;
+	std::cout << "Deserialize : " << after << std::endl;
+	
+	std::cout << after->_dataInt << " / " << after->_dataStr << std::endl;
 }

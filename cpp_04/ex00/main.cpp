@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 13:07:18 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/04 18:02:41 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/11 15:23:41 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ int main()
 //     i->makeSound(); //will output the cat sound!
 //     j->makeSound();
 //     meta->makeSound();
-//     return 0;
+//     delete meta;
+//     delete j;
+//     return (0);
 // }

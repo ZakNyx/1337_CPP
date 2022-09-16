@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 23:10:45 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/01 20:48:22 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/10 15:19:11 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ FragTrap & FragTrap::operator = (const FragTrap & _p1){
 }
 
 void	FragTrap::highFivesGuys(){
-	std::cout << "FragTrap is requesting some High Fives!" << std::endl;
+	std::cout << "FragTrap " << this->_Name << " is requesting some High Fives!" << std::endl;
 }
 

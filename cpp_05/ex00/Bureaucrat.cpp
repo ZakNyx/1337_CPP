@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:21 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/06 18:43:40 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/12 12:31:55 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat::Bureaucrat( int grade, std::string name ) : _name(name)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		this->_grade = grade;
-	std::cout << "Bureaucrat !" << std::endl;
+	std::cout << "Bureaucrat " << this->getName() <<  "'s constructor !" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & _p1): _name(_p1._name){

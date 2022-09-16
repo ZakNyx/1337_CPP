@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 19:55:45 by zihirri           #+#    #+#             */
-/*   Updated: 2022/08/08 14:42:21 by zihirri          ###   ########.fr       */
+/*   Updated: 2022/09/12 15:38:27 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Form;
 
 class Form{
 	private:
-		std::string	_name;
-		const int	_gradeToSigne;
-		const int	_gradeToExecute;
-		bool		_isSigned;
+		const std::string	_name;
+		const int			_gradeToSigne;
+		const int			_gradeToExecute;
+		bool				_isSigned;
 
 	public :
 		
