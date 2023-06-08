@@ -6,7 +6,7 @@
 /*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 18:41:00 by zihirri           #+#    #+#             */
-/*   Updated: 2023/06/07 17:11:18 by zihirri          ###   ########.fr       */
+/*   Updated: 2023/06/08 17:32:15 by zihirri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,8 @@ class BitcoinExchange
 		BitcoinExchange(BitcoinExchange const &_p1);
 		BitcoinExchange &operator=(BitcoinExchange const &_p1);
 		void readExchangeData(const std::string &filename);
-		void checkParams(std::string date, std::string value);
-		void printExchangeData() const
-		{
-			std::map<std::string, float>::const_iterator it;
-			for (it = exchangeData.begin(); it != exchangeData.end(); ++it)
-			{
-				std::cout << "Date: " << it->first << ", Rate: " << it->second << std::endl;
-			}
-		}
+		int checkParams(std::string date, std::string value);
+		void	parseDate(std::string date);
 };
 
 void	ft_error(std::string error);
