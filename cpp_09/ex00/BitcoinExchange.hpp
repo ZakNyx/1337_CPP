@@ -18,22 +18,24 @@
 #include <sstream>
 #include <fstream>
 #include <map>
+#include <cstdlib>
 
 class BitcoinExchange
 {
-	private:
-		std::map<std::string, float> exchangeData;
-	
-	public:
-		BitcoinExchange(void);
-		BitcoinExchange( std::string filename);
-		~BitcoinExchange(void);
-		BitcoinExchange(BitcoinExchange const &_p1);
-		BitcoinExchange &operator=(BitcoinExchange const &_p1);
-		void readExchangeData(const std::string &filename);
-		int checkParams(std::string date, std::string value);
-		void	parseDate(std::string date);
+private:
+	std::map<std::string, float> exchangeData;
+
+public:
+	BitcoinExchange(void);
+	BitcoinExchange(std::string filename);
+	~BitcoinExchange(void);
+	BitcoinExchange(BitcoinExchange const &_p1);
+	BitcoinExchange &operator=(BitcoinExchange const &_p1);
+	void readExchangeData(const std::string &filename);
+	int checkParams(std::string date, std::string value);
+	int parseDate(std::string date);
+	float getValue(std::string date);
 };
 
-void	ft_error(std::string error);
+void ft_error(std::string error);
 #endif
