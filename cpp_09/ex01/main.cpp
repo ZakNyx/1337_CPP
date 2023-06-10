@@ -5,22 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/05 18:26:13 by zihirri           #+#    #+#             */
-/*   Updated: 2023/06/10 16:18:45 by zak              ###   ########.fr       */
+/*   Created: 2023/06/05 18:26:16 by zihirri           #+#    #+#             */
+/*   Updated: 2023/06/10 17:29:55 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
+#include "RPN.hpp"
 
-int	main(int ac, char **av)
+int main(int ac, char **av)
 {
-	(void)av;
-	if (ac != 2)
-	{
-		std::cerr << "Error: Wrong Input!" << std::endl;
-		exit(1);
-	}
-	
-	BitcoinExchange run(av[1]);
-
+    if (ac != 2)
+    {
+        std::cerr << "Error: Bad Input !" << std::endl;
+        exit (1);
+    }
+    RPN test;
+    test.evaluateRPN(av[1]);
 }

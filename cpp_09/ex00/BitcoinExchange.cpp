@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 18:26:16 by zihirri           #+#    #+#             */
-/*   Updated: 2023/06/08 17:54:48 by zihirri          ###   ########.fr       */
+/*   Updated: 2023/06/10 17:41:39 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,15 @@ int BitcoinExchange::checkParams(std::string date, std::string value)
 	return (0);
 }
 
-BitcoinExchange::BitcoinExchange(BitcoinExchange const &_p1)
+// Copy constructor implementation
+BitcoinExchange::BitcoinExchange(const BitcoinExchange &other) : exchangeData(other.exchangeData) {}
+
+// Assignment operator implementation
+BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &other)
 {
-	(void)_p1;
+	if (this != &other)
+		exchangeData = other.exchangeData;
+	return *this;
 }
 
 void BitcoinExchange::readExchangeData(const std::string &filename)
@@ -103,13 +109,6 @@ void BitcoinExchange::readExchangeData(const std::string &filename)
 		exchangeData[_date] = rate;
 	}
 	inputFile.close();
-}
-
-BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &_p1)
-{
-	(void)_p1;
-
-	return (*this);
 }
 
 BitcoinExchange::~BitcoinExchange(void) {}
