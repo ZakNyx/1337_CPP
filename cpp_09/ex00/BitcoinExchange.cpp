@@ -26,11 +26,11 @@ BitcoinExchange::BitcoinExchange(std::string filename)
 	getline(input, line);
 	while (getline(input, line))
 	{
-		size_t delem = line.find('|');
+		size_t delem = line.find(" | ");
 		if ((delem == std::string::npos) || delem >= line.length() - 1)
 			std::cerr << "Error: bad input => " << line << std::endl;
-		_date = line.substr(0, delem - 1);
-		_value = line.substr(delem + 2);
+		_date = line.substr(0, delem);
+		_value = line.substr(delem + 3);
 		if (checkParams(_date, _value) == 1)
 			continue;
 		f_value = std::atof(_value.c_str());
