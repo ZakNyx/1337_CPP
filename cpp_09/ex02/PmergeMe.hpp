@@ -5,28 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/11 18:30:21 by zak               #+#    #+#             */
-/*   Updated: 2023/06/11 22:19:39 by zak              ###   ########.fr       */
+/*   Created: 2023/06/14 15:38:08 by zak               #+#    #+#             */
+/*   Updated: 2023/06/14 15:39:10 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PMERGEME_HPP
-#define PMERGEME_HPP
+# define PMERGEME_HPP
 
-#include <iostream>
-#include <string.h>
-#include <sstream>
-#include <fstream>
-#include <list>
-#include <vector>
 #include <cstdlib>
+#include <iostream>
+#include <sstream>
+#include <exception>
+#include <iostream>
+#include <algorithm>
+#include <ctime>
+#include <vector>
+#include <list>
 
-class PmergeMe
-{
-public:
-    PmergeMe( void );
-    ~PmergeMe( void );
-    PmergeMe(PmergeMe const &p1);
-    PmergeMe &operator=(PmergeMe const &_p1);
-}
-#endif
+class PmergeMe {
+	public:
+		PmergeMe(void);
+		PmergeMe(const PmergeMe& copy);
+		PmergeMe &operator=(const PmergeMe& copy);
+		~PmergeMe(void);
+
+		void SortVector(int argc, char **argv);
+		void sortList(int argc, char **argv);
+};
+
+#endif // PMERGEME_HPP

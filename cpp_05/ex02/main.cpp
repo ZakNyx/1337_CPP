@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zihirri <zihirri@student.42.fr>            +#+  +:+       +#+        */
+/*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 12:44:50 by zihirri           #+#    #+#             */
-/*   Updated: 2022/09/12 15:26:37 by zihirri          ###   ########.fr       */
+/*   Updated: 2023/06/12 20:19:59 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main( void )
 	//Shruberry Test
 	try {
 		ShrubberyCreationForm	chajara("chajara"); //   Required grades: sign 145, exec 137
-		Bureaucrat test0(136, "John Tree");
+		Bureaucrat test0(137, "John Tree");
 		test0.signForm(chajara);
 		test0.executeForm(chajara);
 	}

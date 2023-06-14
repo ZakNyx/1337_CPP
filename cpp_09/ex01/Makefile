@@ -18,10 +18,10 @@ all : $(NAME)
 
 $(NAME): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-	@echo "$(C_GREEN)[BTC COMPILED!]$(C_RES)"
+	@echo "$(C_GREEN)[RPN COMPILED!]$(C_RES)"
 	
 fclean:	
 	$(RM) -f $(NAME)
-	@echo "$(C_RED)[BTC REMOVED!]$(C_RES)"
+	@echo "$(C_RED)[RPN REMOVED!]$(C_RES)"
 
 re : fclean all
