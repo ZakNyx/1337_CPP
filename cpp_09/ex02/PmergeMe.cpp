@@ -6,7 +6,7 @@
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 15:37:43 by zak               #+#    #+#             */
-/*   Updated: 2023/06/14 16:45:14 by zak              ###   ########.fr       */
+/*   Updated: 2023/06/14 16:53:03 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,16 +167,11 @@ void PmergeMe::sortList(int argc, char **argv)
 
 	for (int i = 1; i < argc; i++)
 		storage.push_back(ft_stou(argv[i]));
-
 	std::cout << "List before: ";
 	PrintList(storage);
-
 	std::clock_t start = std::clock();
-
 	storage = mergeInsertList(storage);
-
 	double duration = static_cast<double>(std::clock() - start) / static_cast<double>(CLOCKS_PER_SEC) * 100000;
-
 	std::cout << "List after: ";
 	PrintList(storage);
 

@@ -6,15 +6,13 @@
 /*   By: zak <zak@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 18:26:16 by zihirri           #+#    #+#             */
-/*   Updated: 2023/06/10 17:41:39 by zak              ###   ########.fr       */
+/*   Updated: 2023/06/14 16:46:37 by zak              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 
-BitcoinExchange::BitcoinExchange(void)
-{
-}
+BitcoinExchange::BitcoinExchange(void){}
 
 BitcoinExchange::BitcoinExchange(std::string filename)
 {
